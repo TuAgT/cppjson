@@ -8,11 +8,11 @@
 
 
 Json::Json() {
-
+    type = Object; // 对象类型
 }
 
 Json::Json(const int value) {
-    type = Nums_int; // 数值类型
+    type = Nums_int; // 整数类型
     i_data = value;
 }
 
@@ -21,7 +21,7 @@ Json::Json(const float value) {
     f_data = value;
 }
 
-Json::Json(const std::string value) {
+Json::Json(const std::string& value) {
     if (value == "null") {
         type = Null;
         n_data = "null";
@@ -36,12 +36,12 @@ Json::Json(const bool value) {
 }
 
 Json::Json(const std::vector<Json> value) {
-    type = Array;
+    type = Array; // 数组类型
     a_data = value;
 }
 
 Json::Json(const std::string key, const Json value) {
-    type = Object;
+    type = Object; // 对象类型
     o_data[key] = value;
 }
 
@@ -86,14 +86,14 @@ std::string Json::toString() {
             for (auto &item: a_data) {
                 res += item.toString();
             }
-            res += "]\n";
+            res += "]";
             break;
         case Object:
             res += "{" ;
             for (auto &item: o_data) {
                 res += item.first + ": " + item.second.toString();
             }
-            res += "}\n";
+            res += "}";
             break;
     }
 

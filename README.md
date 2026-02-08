@@ -23,3 +23,7 @@ JSON 是一种数据交换格式，它基于 JavaScript 对象表示法（JavaSc
 ## Json 解析
 
 JsonParser类是json解析的类，提供json文件解析和json字符串解析功能。
+
+## 测试
+
+使用 gtest 框架对代码进行测试
