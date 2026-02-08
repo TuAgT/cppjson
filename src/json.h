@@ -32,7 +32,7 @@ private:
     std::vector<Json> a_data; // 数组
     std::map<std::string, Json> o_data; // 对象
     std::string n_data; // null
-    int type=-1;
+    int type;
 public:
 
 
@@ -42,7 +42,7 @@ public:
 
     explicit Json(float value);
 
-    explicit Json(std::string value);
+    explicit Json(const std::string& value);
 
     explicit Json(bool value);
 
