@@ -1,5 +1,5 @@
 #include <iostream>
-#include "src/json.h"
+#include "json.h"
 int main() {
     /*
      * {"name": "zhangsan",

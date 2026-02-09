@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/Json.h"
+#include "Json.h"
 
 // 测试构造函数
 TEST(JsonTest, ConstructorTest) {

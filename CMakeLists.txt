@@ -3,9 +3,6 @@ project(myJson)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(myJson main.cpp
-        src/json.h
-        src/json.cpp
-        )
 
+add_subdirectory(src)
 add_subdirectory(test)
